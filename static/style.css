@@ -1,0 +1,163 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+:root {
+	--color-primary: #dc143c;
+
+	--color-white: #fff;
+	--color-black: #000;
+
+	--color-grey-dark: #333;
+	--color-grey-light-1: #eee;
+	--color-grey-light-2: #ddd;
+}
+
+html {
+	font-size: 100%;
+}
+
+body {
+	box-sizing: border-box;
+	line-height: 1.1;
+	background-color: #eee;
+	height: 95vh;
+}
+
+.nav {
+	display: grid;
+	grid-template-columns: 10rem minmax(min-content, 1fr);
+	background-color: #ddd;
+}
+
+.nav__logo {
+	font-size: 3rem;
+	font-weight: 500;
+	padding: 0.7rem 1.2rem;
+	margin-left: 1.2rem;
+	color: crimson;
+	width: auto;
+}
+
+.nav__list {
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(4, max-content);
+	place-content: center;
+	margin-left: auto;
+}
+
+.nav__item {
+	padding: 1.6rem 1.7rem;
+}
+
+.button {
+	width: 70%;
+	margin: 0.6rem auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.btn {
+	text-decoration: none;
+	color: var(--color-white);
+	font-size: 1rem;
+	font-weight: 500;
+	background-color: var(--color-primary);
+	padding: 0.3rem 1rem;
+	transition: all 0.2s;
+}
+
+.btn:hover,
+.btn:focus {
+	background-color: var(--color-grey-light-1);
+	color: var(--color-primary);
+}
+
+.pages__link {
+	/* text-decoration: none; */
+	color: var(--color-black);
+	padding: 0.2rem 0.5rem;
+}
+
+.current-link {
+	background-color: var(--color-primary);
+	color: var(--color-white);
+}
+
+.nav__link,
+.nav__link:visited {
+	/* padding: 1rem 2rem; */
+	font-size: 1.2rem;
+	text-decoration: none;
+	color: #333;
+}
+
+.container {
+	width: 75vw;
+	margin: 3rem auto;
+}
+
+table {
+	width: 70%;
+	margin: 3rem auto;
+	border-collapse: collapse;
+}
+
+table caption {
+	font-size: 2rem;
+	font-weight: 400;
+	color: crimson;
+	margin-bottom: 0.5rem;
+}
+
+th,
+td {
+	border: solid 1px #000;
+	height: 2.5rem;
+	padding: 5px 1rem;
+}
+
+th {
+	text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+	html {
+		font-size: 95%;
+	}
+	.nav {
+		grid-template-columns: none;
+	}
+
+	.nav__logo {
+		justify-self: center;
+		font-size: 2rem;
+		padding: 0.5rem 0 0.7 0;
+		margin-left: 0;
+	}
+
+	.nav__list {
+		grid-template-columns: repeat(4, max-content);
+		margin-left: 0;
+		justify-self: center;
+	}
+
+	.nav__item {
+		padding: 0.6rem 1.7rem;
+	}
+
+	.nav__item:not(:last-child) {
+		border-right: solid 1px crimson;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	html {
+		font-size: 65%;
+	}
+}

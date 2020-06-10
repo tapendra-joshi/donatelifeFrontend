@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block content %}
+    <main class="container">
+        <table>
+            <!-- <caption>
+                Blood Banks
+            </caption> -->
+            <div class="button" >
+                <a href="#" class="btn">Previous</a>
+                <div class="pages">
+                    <a href="#" class="pages__link">1</a>
+                    <a href="#" class="pages__link">2</a>
+                    <a href="#" class="pages__link current-link">3</a>
+                    <a href="#" class="pages__link">4</a>
+                    <a href="#" class="pages__link">5</a>
+                    <a href="#" class="pages__link">6</a>
+                    <a href="#" class="pages__link">7</a>
+                    <a href="#" class="pages__link">8</a>
+                </div>
+                <a href="#" class="btn">Next</a>
+            </div>
+            <thead>
+                <tr>
+                    <th>S.no.</th>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>District</th>
+                    <th>State</th>
+                    <th>Pincode</th>
+                    <th>Contact Number</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if data_obj %}
+                {% for obj in data_obj %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{obj.name}}</td>
+                    <td>{{obj.city}}</td>
+                    <td>{{obj.district}}</td>
+                    <td>{{obj.state}}</td>
+                    <td>{{obj.pincode}}</td>
+                    <td>{{obj.contact_number}}</td>
+                    <td>{{obj.address}}</td>
+                </tr>
+                
+                {% endfor %}
+                {% endif %}
+                
+                
+            </tbody>
+            
+        </table>
+        
+    </main>
+{% endblock %}
