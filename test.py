@@ -1,12 +1,12 @@
 import pprint
-from services.login_service import login_user
+from services.get_all_blood_banks import get_all_blood_banks
 
-# pp = pprint.PrettyPrinter(indent=4)
-# pp.pprint(get_all_blood_banks())
-data = {
-	"email":"tapendra2497@gmail.com",
-	"password":"QWERTY"
-}
+pp = pprint.PrettyPrinter(indent=4)
+pp.pprint(get_all_blood_banks(page=2))
+# data = {
+# 	"email":"tapendra2497@gmail.com",
+# 	"password":"QWERTY"
+# }
 # 	"first_name":"Tapendra",
 # 	"last_name":"Joshi",
 # 	"sex":"MALE",
@@ -15,8 +15,8 @@ data = {
 # 	"state":"Haryana",
 # 	"birth_date":"1997-04-24"
 # }
-resp = login_user(data)
-print(resp)
+# resp = login_user(data)
+# print(resp)
 # if resp["data"]:
 #     print("decoded")
 # else:

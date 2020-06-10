@@ -5,19 +5,27 @@
             <!-- <caption>
                 Blood Banks
             </caption> -->
-            <div class="button" >
-                <a href="#" class="btn">Previous</a>
-                <div class="pages">
+            <div class="button" ;">
+            
+                {% if page_metadata.prev_page %}
+                    
+                    <a href="{{ url_for('home.index',page = page_metadata.prev_page) }}" class="btn">Previous</a>
+                {% else %}
+                    <span></span>
+                {% endif %}
+                <!-- <div class="pages" >
                     <a href="#" class="pages__link">1</a>
-                    <a href="#" class="pages__link">2</a>
+                    <a href="#" class="pages__link">2</a>prev_page
                     <a href="#" class="pages__link current-link">3</a>
                     <a href="#" class="pages__link">4</a>
                     <a href="#" class="pages__link">5</a>
                     <a href="#" class="pages__link">6</a>
                     <a href="#" class="pages__link">7</a>
                     <a href="#" class="pages__link">8</a>
-                </div>
-                <a href="#" class="btn">Next</a>
+                </div> -->
+                {% if page_metadata.next_page %}
+                    <a href="{{ url_for('home.index',page = page_metadata.next_page) }}" class="btn">Next</a>
+                {% endif %}
             </div>
             <thead>
                 <tr>
