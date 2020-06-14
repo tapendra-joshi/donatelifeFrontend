@@ -1,8 +1,8 @@
 import pprint
-from services.get_all_blood_banks import get_all_blood_banks
+from services.get_all_blood_banks import blood_bank_by_city
 
 pp = pprint.PrettyPrinter(indent=4)
-pp.pprint(get_all_blood_banks(page=2))
+pp.pprint(blood_bank_by_city('Anantapur'))
 # data = {
 # 	"email":"tapendra2497@gmail.com",
 # 	"password":"QWERTY"

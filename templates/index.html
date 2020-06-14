@@ -1,10 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
     <main class="container">
+        <form action="#" class="form" method="post">
+            <label for="state">Filter by State</label>
+            <select name="state" id="state" class="form-control">
+                <option value="" selected>-- Select State --</option>
+                
+            </select>
+            <label for="city">Filter by city</label>
+            <select name="city" id="city" class="form-control"></select>
+            <button type="submit" class="btn btn--filter">Apply</button>
+        </form>
         <table>
             <!-- <caption>
                 Blood Banks
             </caption> -->
+            <!-- filter form -->
+			
             <div class="button" ;">
             
                 {% if page_metadata.prev_page %}
@@ -13,6 +25,12 @@
                 {% else %}
                     <span></span>
                 {% endif %}
+                <div style="margin:0 auto">
+                    <h1 class="heading__primary">Blood Banks</h1>
+                </div>
+                <!-- <caption>
+                Blood Banks
+                </caption> -->
                 <!-- <div class="pages" >
                     <a href="#" class="pages__link">1</a>
                     <a href="#" class="pages__link">2</a>prev_page
